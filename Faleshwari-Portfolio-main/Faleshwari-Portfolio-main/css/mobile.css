@@ -1,0 +1,50 @@
+/* ==========================================================
+   MOBILE & TABLET POLISH  (Phase 8)
+   This file loads LAST, so it can fine-tune the other files.
+   ========================================================== */
+
+html { -webkit-tap-highlight-color: transparent; }
+
+/* ---------- Tablets (portrait) ---------- */
+@media (min-width: 761px) and (max-width: 900px) {
+  .hero__foot { flex-direction: column; align-items: flex-start; }
+}
+@media (min-width: 641px) and (max-width: 900px) {
+  .skill { grid-template-columns: 3rem 1fr; gap: 0.4rem 1rem; }
+  .skill__desc { grid-column: 2; }
+  .skill:hover { padding-left: 0; }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  .qual { grid-template-columns: 3rem 1fr; gap: 0.4rem 1rem; }
+  .qual__meta { grid-column: 2; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 640px) {
+  .work--tall { aspect-ratio: 5 / 6; }      /* shorter cards = less endless scrolling */
+}
+
+/* ---------- Touch screens: make everything thumb-sized (44px+) ---------- */
+@media (pointer: coarse) {
+  .nav__logo { display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; }
+  .nav__links a { padding-block: 0.8rem; }
+  .footer ul { gap: 0; }
+  .footer li a { display: inline-block; padding-block: 0.7rem; }
+  .contact__phone { padding-block: 0.4rem; }
+  .chip { min-height: 44px; }
+  .lightbox__nav button { min-height: 44px; }
+}
+
+/* ---------- Phase 9 fixes ---------- */
+
+/* Text that screen readers read but eyes don't see */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Small footer labels (replaces the old h4 style) */
+.footer__h {
+  margin: 0 0 1rem;
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+}

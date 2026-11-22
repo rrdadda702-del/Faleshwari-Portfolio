@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faleshwari Soni — Graphic Designer</title>
+    <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Tells CSS that JavaScript is available (used for animations) -->
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+      <link rel="stylesheet" href="css/projects.css">
+        <link rel="stylesheet" href="css/contact.css">
+          <link rel="stylesheet" href="css/motion.css">
+            <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+  <!-- ========== OPENING SCREEN ========== -->
+  <div class="preloader" aria-hidden="true">
+    <span class="preloader__dot"></span>
+    <span class="preloader__count"><b id="count">0</b>%</span>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo" aria-label="Faleshwari Soni — home">FS<span>.</span></a>
+
+    <nav class="nav__links" id="menu" aria-label="Main">
+      <a href="#home" class="link">Home</a>
+      <a href="#about" class="link">About</a>
+      <a href="#skills" class="link">Skills</a>
+      <a href="#projects" class="link">Projects</a>
+      <a href="#contact" class="link">Contact</a>
+    </nav>
+
+    <button class="nav__toggle" id="menuToggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+
+      <!-- Animated background -->
+      <div class="hero__bg" aria-hidden="true">
+        <span class="grid"></span>
+        <span class="orb orb--lime"></span>
+        <span class="orb orb--violet"></span>
+      </div>
+
+      <!-- Rotating badge -->
+      <div class="badge reveal" style="--d:1.6" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#circle">GRAPHIC DESIGN • DCA • HINDI TYPING • </textPath></text>
+        </svg>
+        <span class="badge__dot"></span>
+      </div>
+
+      <div class="wrap hero__inner">
+        <p class="eyebrow reveal" style="--d:0.9">Graphic Designer — Portfolio</p>
+
+        <h1 class="hero__name" aria-label="Faleshwari Soni">
+          <span class="line" aria-hidden="true"><span style="--d:0.0">Faleshwari</span></span>
+          <span class="line line--two">
+            <span style="--d:0.12" aria-hidden="true">Soni</span>
+            <span class="hero__headline reveal" style="--d:1.2">Ideas, <br>made <em>visible.</em></span>
+          </span>
+        </h1>
+
+        <div class="hero__foot reveal" style="--d:1.4">
+          <p class="hero__intro">
+            I'm a graphic designer who loves bold posters, clean layouts and creative ideas.
+            With a DCA diploma and Hindi typing skills, I turn simple messages into
+            visuals people notice.
+          </p>
+          <div class="hero__buttons">
+            <a href="#projects" class="btn btn--accent">Explore projects <span aria-hidden="true">↓</span></a>
+            <a href="#contact" class="btn">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Temporary blocks so the menu links have somewhere to go (replaced in Phase 5) -->
+        <!-- ========== ABOUT ========== -->
+    <section class="wrap section" id="about">
+      <p class="eyebrow sec-label fade"><span class="num">01</span> About</p>
+
+      <div class="about__grid">
+        <div>
+                    <h2 class="statement" data-split></h2>
+            I'm Faleshwari, a graphic designer who turns <span class="serif">ideas</span> into clean, bold visuals.
+          </h2>
+
+          <p class="about__text fade" style="--d:0.1">
+            I enjoy working with layouts, colors and typography to make designs that are
+            easy to notice and easy to understand. Alongside design, I have completed a
+            DCA (Diploma in Computer Applications) and I can type in Hindi, so I'm
+            comfortable with computers and with both English and Hindi text.
+          </p>
+
+          <dl class="facts fade" style="--d:0.2">
+            <div><dt>Role</dt><dd>Graphic Designer</dd></div>
+            <div><dt>Training</dt><dd>DCA</dd></div>
+            <div><dt>Typing</dt><dd>Hindi</dd></div>
+          </dl>
+        </div>
+
+        <!-- PHOTO: to add her real photo, delete the two lines inside
+             <div class="portrait"> and put this instead:
+             <img src="assets/images/faleshwari.jpg" alt="Faleshwari Soni"> -->
+        <div class="portrait-wrap fade" style="--d:0.15">
+                    <div class="portrait">
+            <img src="assets/images/faleshwari.jpg" alt="Faleshwari Soni">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="wrap section" id="skills">
+      <p class="eyebrow sec-label fade"><span class="num">02</span> Skills</p>
+            <h2 class="sr-only">Skills</h2>
+
+      <!-- TO ADD A SKILL: copy one whole <li> ... </li> block, paste it
+           below the last one, and change the number, name and text. -->
+      <ul class="skills__list">
+        <li class="skill fade">
+          <span class="skill__num">01</span>
+          <h3 class="skill__name">Graphic Design</h3>
+          <p class="skill__desc">Turning ideas into clear, bold visuals with layout, color and typography.</p>
+        </li>
+        <li class="skill fade">
+          <span class="skill__num">02</span>
+          <h3 class="skill__name">DCA / Computer Applications</h3>
+          <p class="skill__desc">Diploma in Computer Applications. Comfortable working with computers and everyday software.</p>
+        </li>
+        <li class="skill fade">
+          <span class="skill__num">03</span>
+          <h3 class="skill__name">Hindi Typing</h3>
+          <p class="skill__desc">Typing in Hindi for text and design work.</p>
+        </li>
+      </ul>
+
+      <!-- Moving word strip (the second group is a copy that makes the loop seamless) -->
+      <div class="marquee fade" aria-hidden="true">
+        <div class="marquee__track">
+          <div class="marquee__group"><span>Graphic Design</span><span>DCA</span><span>Hindi Typing</span></div>
+          <div class="marquee__group"><span>Graphic Design</span><span>DCA</span><span>Hindi Typing</span></div>
+        </div>
+      </div>
+    </section>
+        <!-- ========== PROJECTS ========== -->
+    <section class="wrap section" id="projects">
+      <p class="eyebrow sec-label fade"><span class="num">03</span> Projects</p>
+
+      <div class="projects__head">
+                <h2 class="title" data-split>Selected <span class="serif">work</span></h2>
+        <!-- This note appears automatically while any project is still a sample -->
+        <p class="projects__note fade" id="sampleNote" hidden>
+          Sample layouts for now. Real designs will replace them as they are added.
+        </p>
+      </div>
+
+      <!-- Filter buttons and cards are created by js/gallery.js from js/projects.js -->
+      <div class="filters fade" id="filters" role="group" aria-label="Filter projects"></div>
+      <div class="gallery" id="gallery"></div>
+    </section>
+        <!-- ========== QUALIFICATIONS ========== -->
+    <section class="wrap section" id="qualifications">
+      <p class="eyebrow sec-label fade"><span class="num">04</span> Qualifications</p>
+            <h2 class="sr-only">Qualifications</h2>
+
+      <!-- TO ADD A QUALIFICATION: copy one whole <li> ... </li> block, paste it
+           below the last one, then change the number, name and details.
+           Only add institutions and years that are real. -->
+      <ul class="qual__list">
+        <li class="qual fade">
+          <span class="qual__num">01</span>
+          <h3 class="qual__name">
+            DCA
+            <small>Diploma in Computer Applications</small>
+          </h3>
+          <!-- Add the institution and year here when you have them, like:
+               <p class="qual__meta"><strong>Institution name</strong>Year</p> -->
+          <p class="qual__meta"></p>
+        </li>
+      </ul>
+
+      <!-- Delete this box once more qualifications are added -->
+      <p class="qual__more fade">More education, certificates and courses can be added here.</p>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow sec-label fade"><span class="num">05</span> Contact</p>
+
+        <h2 class="contact__title fade" aria-label="Let's create something together">
+          <span class="line" aria-hidden="true">Let's create</span>
+          <span class="line" aria-hidden="true">something</span>
+          <span class="line" aria-hidden="true"><span class="serif">together</span></span>
+        </h2>
+
+        <div class="contact__row fade">
+          <div>
+            <p class="eyebrow contact__name">Faleshwari Soni — Graphic Designer</p>
+            <a class="contact__phone link" href="tel:+916266102103">+91 62661 02103</a>
+          </div>
+
+          <div class="contact__buttons">
+            <!-- WhatsApp: wa.me/ + country code 91 + number (no + or spaces).
+                 The text after ?text= is the first message that appears. -->
+            <a class="btn btn--accent btn--lg"
+               href="https://wa.me/916266102103?text=Hi%20Faleshwari%2C%20I%27d%20like%20to%20talk%20about%20a%20design%20project."
+               target="_blank" rel="noopener">WhatsApp me</a>
+            <a class="btn btn--lg" href="tel:+916266102103">Call now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__name">Faleshwari Soni</p>
+          <p class="footer__role">Graphic Designer</p>
+        </div>
+
+        <nav aria-label="Footer">
+                    <p class="footer__h">Navigate</p>
+          <ul>
+            <li><a class="link" href="#home">Home</a></li>
+            <li><a class="link" href="#about">About</a></li>
+            <li><a class="link" href="#skills">Skills</a></li>
+            <li><a class="link" href="#projects">Projects</a></li>
+            <li><a class="link" href="#qualifications">Qualifications</a></li>
+            <li><a class="link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+                    <p class="footer__h">Contact</p>
+          <ul>
+            <li><a class="link footer__contact" href="tel:+916266102103">+91 62661 02103</a></li>
+            <li><a class="link footer__contact" href="https://wa.me/916266102103" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <!-- The year updates by itself (see js/script.js) -->
+        <p>© <span id="year">2026</span> Faleshwari Soni. All rights reserved.</p>
+        <a href="#home" class="totop" aria-label="Back to top">↑</a>
+      </div>
+    </div>
+  </footer>
+  
+    <!-- ========== PROJECT PREVIEW WINDOW ========== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project preview" aria-hidden="true">
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__panel">
+      <button class="lightbox__close" type="button" data-close aria-label="Close preview">Close ✕</button>
+      <div class="lightbox__media" id="lbMedia"></div>
+      <div class="lightbox__info">
+        <p class="eyebrow" id="lbCat"></p>
+        <h3 class="lightbox__title" id="lbTitle"></h3>
+        <p class="lightbox__desc" id="lbDesc"></p>
+        <div class="lightbox__nav">
+          <button type="button" id="lbPrev" aria-label="Previous project">← Prev</button>
+          <span id="lbCount"></span>
+          <button type="button" id="lbNext" aria-label="Next project">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/projects.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
